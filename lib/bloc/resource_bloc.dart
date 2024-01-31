@@ -6,22 +6,25 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 class ResourceBloc extends Bloc<ResourceEvent, ResourceState>
 {
+  //use the model
   ResourceModel? resourceModel;
+  //use the repository
   ResourceRepository resourceRepository = ResourceRepository();
 
+  //add Initial State
   ResourceBloc() : super(InitialState())
   {
-    on<ResourceEvent>((event,emit)
-    async
+    on<ResourceEvent>((event,emit) async
     {
       if(event is SetDataToResourceEvent)
         {
           emit(ResourceInProgressState());
           try
               {
-                resourceModel = await resourceRepository.setDataToResourceResource() ;
+                resourceModel = await resourceRepository.setDataToResourceResource();
                 emit(ResourceDataIsLoadedState(resourceModel: resourceModel!));
               }
+
               catch(e)
               {
                 emit(ResourceErrorState(e.toString()));

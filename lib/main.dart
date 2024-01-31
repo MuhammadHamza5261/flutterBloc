@@ -1,11 +1,10 @@
-
 import 'package:bloc_implementation_flutter/bloc/resource_bloc.dart';
-import 'package:bloc_implementation_flutter/ui/bloc_implement.dart';
+import 'package:bloc_implementation_flutter/ui/first_Screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
-
 import 'package:flutter_bloc/flutter_bloc.dart';
+
 void main() {
   runApp(
     MultiBlocProvider(
@@ -48,10 +47,10 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       backgroundColor: Colors.black,
       body: Column(
-        children: const [
+        children: [
           SizedBox(
             height: 200,
           ),
