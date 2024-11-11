@@ -9,7 +9,9 @@ void main() {
   runApp(
     MultiBlocProvider(
       providers: [
+
         BlocProvider<ResourceBloc>(create: (context) => ResourceBloc()),
+
       ],
        child: MyApp(),
       // MyApp());

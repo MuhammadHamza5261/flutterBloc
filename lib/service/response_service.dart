@@ -2,21 +2,25 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import '../model/resource_model.dart';
 
-
+   //create a class
    class ResponseService {
 
      //create a method of service
 
      Future<ResourceModel> setDataToResponseService() async {
 
-    // url of api
+    // url of api to fetch the data
 
     final response = await http.get(Uri.parse('https://reqres.in/api/unknown'),
 
       headers: <String, String> {
+
         "content-type": "application/json",
         "Accept": "application/json",
+
        },
+
+
 
       );
 

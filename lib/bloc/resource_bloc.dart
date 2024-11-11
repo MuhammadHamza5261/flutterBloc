@@ -11,17 +11,21 @@ class ResourceBloc extends Bloc<ResourceEvent, ResourceState>
   //use the repository
   ResourceRepository resourceRepository = ResourceRepository();
 
-  //add Initial State
+  // call the constructor and add initialState
+
   ResourceBloc() : super(InitialState())
   {
     on<ResourceEvent>((event,emit) async
     {
+      //call the event
       if(event is SetDataToResourceEvent)
         {
           emit(ResourceInProgressState());
           try
               {
                 resourceModel = await resourceRepository.setDataToResourceResource();
+                
+                //emit the loaded state and put model
                 emit(ResourceDataIsLoadedState(resourceModel: resourceModel!));
               }
 

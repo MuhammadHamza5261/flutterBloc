@@ -1,2 +1,5 @@
 abstract class ResourceEvent{}
- class SetDataToResourceEvent extends ResourceEvent{}
+ //create a event class
+ class SetDataToResourceEvent extends ResourceEvent{
+
+ }

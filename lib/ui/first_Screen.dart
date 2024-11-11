@@ -59,10 +59,11 @@ class _BlocImplementSTFState extends State<BlocImplementSTF> {
               state is ResourceDataIsLoadedState?
               SingleChildScrollView(
                child: Padding(
-                 padding: const EdgeInsets.symmetric(horizontal: 20),
-                 child: Column(
-                    children: [
+                 padding: const EdgeInsets.symmetric(horizontal: 20,),
 
+                 child: Column(
+
+                    children: [
                       Container(
                         margin: EdgeInsets.only(top: height*0.05),
                         child: ListView.builder(
@@ -71,11 +72,10 @@ class _BlocImplementSTFState extends State<BlocImplementSTF> {
                             itemBuilder: (context,i){
                             const NeverScrollableScrollPhysics();
                               return Container(
-                                margin: const EdgeInsets.only(bottom: 10),
-
+                                margin: const EdgeInsets.only(bottom: 10,),
                                 decoration: BoxDecoration(
                                     color: Colors.grey.shade300,
-                                  borderRadius: BorderRadius.circular(5)
+                                  borderRadius: BorderRadius.circular(5),
                                 ),
                                 child: ListTile(
                                   selectedColor: Colors.grey.shade300,
@@ -115,6 +115,8 @@ class _BlocImplementSTFState extends State<BlocImplementSTF> {
     );
   }
 }
+
+
 // 0xff
 ///
 // Column(
