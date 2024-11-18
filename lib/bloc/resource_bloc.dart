@@ -23,6 +23,7 @@ class ResourceBloc extends Bloc<ResourceEvent, ResourceState>
           emit(ResourceInProgressState());
           try
               {
+
                 resourceModel = await resourceRepository.setDataToResourceResource();
                 
                 //emit the loaded state and put model
